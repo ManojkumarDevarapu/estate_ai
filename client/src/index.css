@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+@layer base {
+  body {
+    @apply min-h-screen text-slate-800 antialiased;
+    background: linear-gradient(
+      180deg,
+      #f5f3e7 0%,
+      #d4e5c3 35%,
+      #a8c5a0 70%,
+      #8ba888 100%
+    );
+    background-attachment: fixed;
+  }
+
+  h1 {
+    @apply text-3xl font-bold tracking-tight text-slate-900;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-slate-800;
+  }
+
+  h3 {
+    @apply text-lg font-semibold text-slate-700;
+  }
+
+  p {
+    @apply text-slate-600 leading-relaxed;
+  }
+}
+
+/* ===============================
+   COMPONENTS
+================================ */
+@layer components {
+
+  /* Page wrapper */
+  .page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  }
+
+  /* ===============================
+     CARDS / DIV CONTENT
+     (warm off-white, not pure white)
+  ================================ */
+  .card {
+    background-color: #fbfdf8; /* warm neutral */
+    @apply rounded-2xl border border-green-200/60
+           shadow-md p-6
+           transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply shadow-lg -translate-y-1;
+  }
+
+  /* ===============================
+     BUTTONS (PALETTE-ALIGNED)
+  ================================ */
+  .btn-primary {
+    background: linear-gradient(
+      135deg,
+      #7f9f7a,  /* sage */
+      #6b8f6e   /* forest sage */
+    );
+    color: #ffffff;
+    @apply inline-flex items-center justify-center gap-2
+           rounded-xl px-6 py-3
+           font-semibold
+           shadow-md
+           transition-all duration-200;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(
+      135deg,
+      #6b8f6e,
+      #5a7f61
+    );
+    @apply shadow-lg -translate-y-0.5;
+  }
+
+  .btn-primary:active {
+    @apply translate-y-0 scale-100;
+  }
+
+  /* ===============================
+     INPUTS (MATCH CARDS)
+  ================================ */
+  .input {
+    background-color: #fbfdf8;
+    @apply w-full rounded-xl border border-green-200/70
+           px-4 py-3 text-sm
+           focus:outline-none
+           focus:ring-2 focus:ring-green-400/40
+           focus:border-green-400;
+  }
+
+  /* ===============================
+     BADGES (SOFT + NATURAL)
+  ================================ */
+  .badge {
+    @apply inline-flex items-center gap-1
+           rounded-full px-3 py-1.5
+           text-xs font-semibold;
+  }
+
+  .badge-success {
+    background-color: #dce9da;
+    color: #3f5f44;
+  }
+
+  .badge-warning {
+    background-color: #efe3c7;
+    color: #7a6232;
+  }
+
+  .badge-info {
+    background-color: #dbe7e0;
+    color: #355f55;
+  }
+
+  /* ===============================
+     PRICE STYLES
+  ================================ */
+  .price {
+    @apply text-xl font-bold text-slate-900;
+  }
+
+  .price-ai {
+    color: #4e7c5b;
+    @apply font-bold;
+  }
+
+  /* ===============================
+     GRID
+  ================================ */
+  .history-grid {
+    @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  }
+}
