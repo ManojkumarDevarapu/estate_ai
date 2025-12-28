@@ -51,7 +51,7 @@ This project was built for **SDE / placement evaluation** and demonstrates **rea
 * Mongoose
 * JWT Authentication
 * bcryptjs
-* OpenAI SDK (with fallback support)
+* OpenAI SDK (API and along with fallback support)
 
 ### Cloud & Tools
 
